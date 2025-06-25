@@ -1,10 +1,10 @@
 import React from 'react'
-import { UseFormRegister, FieldError } from 'react-hook-form'
+import { UseFormRegister, FieldError, FieldValues } from 'react-hook-form'
 
 interface SelectFieldProps {
   label: string
   name: string
-  register: UseFormRegister<any>
+  register: UseFormRegister<FieldValues>
   error?: FieldError
   required?: boolean
   options: { value: string; label: string }[]
