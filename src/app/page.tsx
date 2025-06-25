@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { useForm } from 'react-hook-form'
+import { useForm, FieldValues } from 'react-hook-form'
 import { FormSection } from './components/FormSection'
 import { InputField } from './components/InputField'
 import { SelectField } from './components/SelectField'
@@ -72,9 +72,9 @@ export default function EstimateForm() {
     handleSubmit,
     formState: { errors, isSubmitting },
     reset,
-  } = useForm<any>()
+  } = useForm<FieldValues>()
 
-  const onSubmit = async (data: any) => {
+  const onSubmit = async (data: FieldValues) => {
     try {
       console.log('見積もりデータ:', data)
       await new Promise(resolve => setTimeout(resolve, 1000))
