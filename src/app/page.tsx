@@ -108,9 +108,13 @@ export default function EstimateForm() {
                 <span className="text-gray-700">{option.label}</span>
               </label>
             ))}
-            {errors.estimateType && (
-              <p className="form-error">{errors.estimateType.message}</p>
-            )}
+{errors.estimateType && (
+  <p className="form-error">
+    {typeof errors.estimateType === 'object' && errors.estimateType.message 
+      ? String(errors.estimateType.message) 
+      : '見積もりタイプを選択してください'}
+  </p>
+)}
           </div>
         </FormSection>
 
