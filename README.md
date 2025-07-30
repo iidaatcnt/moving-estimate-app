@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Moving Estimate App - 引っ越し見積もりアプリ
 
-## Getting Started
+このプロジェクトは、引っ越しの見積もりをオンラインで簡単に行えるWebアプリケーションです。
 
-First, run the development server:
+## 概要
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+ユーザーは、見積もりタイプ、お客様情報、現住所、引っ越し先住所、希望日、荷物リスト、引っ越し人数、メッセージなどを入力して、引っ越しの概算見積もりを依頼できます。
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 機能
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+-   **ステップ形式の見積もり入力:**
+    -   見積もりタイプ（大まかな費用、電話見積もり、訪問見積もり）
+    -   お客様情報（名前、フリガナ、メールアドレス、電話番号）
+    -   現住所と引っ越し先住所（郵便番号、住所、建物種別、間取り、エレベーター有無、道幅）
+    -   引っ越し希望日（第1〜第3希望）
+    -   荷物リスト（大型、小型）
+    -   引っ越し人数
+    -   メッセージ（質問・要望など）
+-   **入力フォームのバリデーション:** 必須項目のチェックなど、入力の正確性をサポートします。
+-   **見積もり依頼送信:** 入力された情報を元に見積もり依頼を送信できます（実際の見積もり計算は含まれません）。
+-   **レスポンシブデザイン:** 様々なデバイスで利用しやすいように最適化されています。
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 使い方
 
-## Learn More
+1.  アプリを起動し、画面の指示に従ってステップごとに必要な情報を入力します。
+2.  全ての情報を入力したら、「見積もりを依頼する」ボタンをクリックして送信します。
 
-To learn more about Next.js, take a look at the following resources:
+## 技術スタック
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+-   **フレームワーク:** Next.js
+-   **ライブラリ:** React Hook Form (フォーム管理)
+-   **言語:** TypeScript
+-   **スタイリング:** Tailwind CSS
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ライブデモ
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+（このプロジェクトがGitHub Pagesで公開されている場合、ここにURLを記載します。現状では不明なためプレースホルダーとします。）
